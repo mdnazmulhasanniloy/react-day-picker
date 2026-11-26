@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "TYPEDOC_WATCH=true docusaurus start",
-    "build": "docusaurus build",
+    "start": "node init && TYPEDOC_WATCH=true docusaurus start",
+    "build": "node init && docusaurus build",
     "serve": "docusaurus serve",
     "deploy": "USE_SSH=true docusaurus deploy",
     "clear": "docusaurus clear",
