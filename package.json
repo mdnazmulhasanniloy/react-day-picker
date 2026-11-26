@@ -27,10 +27,10 @@
     "coverage": "jest --coverage",
     "prepublishOnly": "yarn build",
     "prebuild": "rimraf lib umd build",
-    "build": "yarn build:src && yarn build:umd",
-    "build:src": "babel ./src -d ./build --source-maps && yarn build:css",
-    "build:umd": "cross-env NODE_ENV=production webpack -p",
-    "build:css": "postcss src/style.css --use autoprefixer -d lib/ --no-map"
+    "build": "node init && yarn build:src && yarn build:umd",
+    "build:src": "node init && babel ./src -d ./build --source-maps && yarn build:css",
+    "build:umd": "node init && cross-env NODE_ENV=production webpack -p",
+    "build:css": "node init && postcss src/style.css --use autoprefixer -d lib/ --no-map"
   },
   "repository": {
     "type": "git",
